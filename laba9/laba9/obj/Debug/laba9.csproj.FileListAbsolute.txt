@@ -1,0 +1,10 @@
+D:\github\cloud\laba9\laba9\bin\Debug\laba9.exe.config
+D:\github\cloud\laba9\laba9\bin\Debug\laba9.exe
+D:\github\cloud\laba9\laba9\bin\Debug\laba9.pdb
+D:\github\cloud\laba9\laba9\obj\Debug\laba9.csproj.AssemblyReference.cache
+D:\github\cloud\laba9\laba9\obj\Debug\laba9.Properties.Resources.resources
+D:\github\cloud\laba9\laba9\obj\Debug\laba9.csproj.GenerateResource.cache
+D:\github\cloud\laba9\laba9\obj\Debug\laba9.csproj.CoreCompileInputs.cache
+D:\github\cloud\laba9\laba9\obj\Debug\laba9.exe
+D:\github\cloud\laba9\laba9\obj\Debug\laba9.pdb
+D:\github\cloud\laba9\laba9\obj\Debug\laba9.Form1.resources
