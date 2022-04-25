@@ -22,9 +22,10 @@ namespace laba9
         {
             OpenFile();
         }
+        string path = @"C:\Users\Student\Desktop\cloud\laba9\asd.xlsx";
         public void OpenFile()
         {
-            Excel excel = new Excel(@"D:\github\cloud\laba9\asd.xlsx",1);
+            Excel excel = new Excel(path, 1);
             MessageBox.Show(excel.ReadCell(0, 0));
         }
     }
