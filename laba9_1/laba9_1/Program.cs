@@ -11,7 +11,7 @@ namespace laba9_1
     {
         static void Main(string[] args)
         {
-            string path = @"C:\Users\Student\Desktop\cloud\laba9_1\asd.xlsx";
+            string path = @"D:\github\cloud\laba9_1\asd.xlsx";
             Excel excel = new Excel(path, 1);
             Console.WriteLine(excel.ReadCell(0, 0));
             excel.WriteCell("Почта", 1, 3);
@@ -27,7 +27,7 @@ namespace laba9_1
             excel.WriteCell("12.10.2015", 4, 4);
             excel.WriteCell("04.11.2012", 5, 4);
             excel.WriteCell("05.10.2012", 6, 4);
-
+            excel.Stylee();
             Console.ReadKey();
             excel.clos(path);
         }
