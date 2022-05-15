@@ -1,0 +1,11 @@
+D:\github\cloud\laba11\laba11\bin\Debug\laba11.exe.config
+D:\github\cloud\laba11\laba11\bin\Debug\laba11.exe
+D:\github\cloud\laba11\laba11\bin\Debug\laba11.pdb
+D:\github\cloud\laba11\laba11\obj\Debug\laba11.csproj.AssemblyReference.cache
+D:\github\cloud\laba11\laba11\obj\Debug\laba11.addfrm.resources
+D:\github\cloud\laba11\laba11\obj\Debug\laba11.Form1.resources
+D:\github\cloud\laba11\laba11\obj\Debug\laba11.Properties.Resources.resources
+D:\github\cloud\laba11\laba11\obj\Debug\laba11.csproj.GenerateResource.cache
+D:\github\cloud\laba11\laba11\obj\Debug\laba11.csproj.CoreCompileInputs.cache
+D:\github\cloud\laba11\laba11\obj\Debug\laba11.exe
+D:\github\cloud\laba11\laba11\obj\Debug\laba11.pdb
