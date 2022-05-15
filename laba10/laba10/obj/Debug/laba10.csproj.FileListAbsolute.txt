@@ -1,0 +1,10 @@
+D:\github\cloud\laba10\laba10\bin\Debug\laba10.exe.config
+D:\github\cloud\laba10\laba10\bin\Debug\laba10.exe
+D:\github\cloud\laba10\laba10\bin\Debug\laba10.pdb
+D:\github\cloud\laba10\laba10\obj\Debug\laba10.csproj.AssemblyReference.cache
+D:\github\cloud\laba10\laba10\obj\Debug\laba10.Form1.resources
+D:\github\cloud\laba10\laba10\obj\Debug\laba10.Properties.Resources.resources
+D:\github\cloud\laba10\laba10\obj\Debug\laba10.csproj.GenerateResource.cache
+D:\github\cloud\laba10\laba10\obj\Debug\laba10.csproj.CoreCompileInputs.cache
+D:\github\cloud\laba10\laba10\obj\Debug\laba10.exe
+D:\github\cloud\laba10\laba10\obj\Debug\laba10.pdb
