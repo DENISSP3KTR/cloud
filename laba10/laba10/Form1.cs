@@ -114,23 +114,30 @@ namespace laba10
                     {
                         p2 = e.Location;
                         cl1 = true;
-                        g.DrawLine(pen1, p1, p2);
-                        int rad = 50;
+                        //g.DrawLine(pen1, p1, p2);
+                        int radx = 100;
                         Point pa = new Point();
-                        pa = minlen(p1, p2, rad);
-                        int a = rad / 2 - pa.Y;
-                        int b = rad / 2 - pa.X;
-                        pa = minlen(p1, p2, rad / 2);
-                        int a1 = rad / 4 - pa.Y;
-                        int b1 = rad / 4 - pa.X;
+                        //pa = minlen(p1, p2, rad);
+                        int a;
+                        int b;
+                        //pa = minlen(p1, p2, rad / 2);
+                        //int a1 = rad / 4 - pa.Y;
+                        //int b1 = rad / 4 - pa.X;
                         Point pb = new Point();
-                        pb = GetNextPoint(p1, p2, rad);
-                        g.DrawEllipse(pen1, p1.X - a, p1.Y - b, rad, rad);
-                        g.DrawEllipse(pen1, pb.X - a1, pb.Y - b1, rad/2, rad/2);
-                        int i = 0;
-                        while (i < 10)
+                        //pb = GetNextPoint(p1, p2, rad);
+                        //g.DrawEllipse(pen1, p1.X - a, p1.Y - b, rad, rad);
+                        //g.DrawEllipse(pen1, pb.X - a1, pb.Y - b1, rad/2, rad/2);
+                        int i = 10;
+                        while (i > 0)
                         {
-
+                            pa = minlen(p1, p2, radx);
+                            a = radx / 2 - pa.Y;
+                            b = radx / 2 - pa.X;
+                            g.DrawEllipse(pen1, p1.X - a, p1.Y - b, radx, radx);
+                            pb = GetNextPoint(p1, p2, radx);
+                            radx = radx / 2;
+                            p1 = pb;
+                            i--;
                         }
                         
                     } 
@@ -153,6 +160,12 @@ namespace laba10
             int dx = point1.X - point2.X;
             int dy = point1.Y - point2.Y;
             return Math.Sqrt(dx * dx + dy * dy);
+        }
+        public int RadiusX(Point p1, Point p2)
+        {
+            int d = (int)DistanceBetweenTwoPoints(p1, p2);
+            int x = d / 55;
+            return x;
         }
         public Point GetNextPoint(Point p1, Point p2, int rad)
         {

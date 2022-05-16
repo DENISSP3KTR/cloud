@@ -11,7 +11,7 @@ namespace laba9_1
     {
         static void Main(string[] args)
         {
-            string path = @"D:\github\cloud\laba9_1\asd.xlsx";
+            string path = @"C:\Users\Student\Desktop\cloud\laba9_1\asd.xlsx";
             Excel excel = new Excel(path, 1);
             Console.WriteLine(excel.ReadCell(0, 0));
             excel.WriteCell("Почта", 1, 3);
