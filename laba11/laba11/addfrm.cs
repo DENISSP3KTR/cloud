@@ -68,6 +68,9 @@ namespace laba11
             }
             xdoc.Save(opd.FileName);
             this.Close();
+            MessageBox.Show("Успешно добавлено");
+            Form1 frm = new Form1();
+            frm.InitTable();
         }
     }
 }
