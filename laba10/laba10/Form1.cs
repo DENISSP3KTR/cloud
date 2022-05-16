@@ -115,12 +115,24 @@ namespace laba10
                         p2 = e.Location;
                         cl1 = true;
                         g.DrawLine(pen1, p1, p2);
-                        int rad = 100;
+                        int rad = 50;
                         Point pa = new Point();
                         pa = minlen(p1, p2, rad);
                         int a = rad / 2 - pa.Y;
                         int b = rad / 2 - pa.X;
+                        pa = minlen(p1, p2, rad / 2);
+                        int a1 = rad / 4 - pa.Y;
+                        int b1 = rad / 4 - pa.X;
+                        Point pb = new Point();
+                        pb = GetNextPoint(p1, p2, rad);
                         g.DrawEllipse(pen1, p1.X - a, p1.Y - b, rad, rad);
+                        g.DrawEllipse(pen1, pb.X - a1, pb.Y - b1, rad/2, rad/2);
+                        int i = 0;
+                        while (i < 10)
+                        {
+
+                        }
+                        
                     } 
                 }
                 else
@@ -142,12 +154,26 @@ namespace laba10
             int dy = point1.Y - point2.Y;
             return Math.Sqrt(dx * dx + dy * dy);
         }
+        public Point GetNextPoint(Point p1, Point p2, int rad)
+        {
+            Point p = new Point();
+            double d = DistanceBetweenTwoPoints(p1, p2);
+            double mxx = p2.X - p1.X;
+            double mxy = p2.Y - p1.Y;
+            double mcos = mxx / d;
+            double msin = mxy / d;
+            double mnx = rad * mcos;
+            double mny = rad * msin;
+            p.X = p1.X + (int)mnx;
+            p.Y = p1.Y + (int)mny;
+            return p;
+        }
         public Point minlen(Point p1, Point p2, double rad)
         {
             double d = DistanceBetweenTwoPoints(p1, p2);
             double a, b;
-            a = Math.Abs(p2.Y - p1.Y);
-            b = Math.Abs(p2.X - p1.X);
+            a = p2.Y - p1.Y;
+            b = p2.X - p1.X;
             double sinalf, cosalf;
             Point p = new Point();
             sinalf = a / d;
@@ -157,10 +183,6 @@ namespace laba10
             p.X = (int)a;
             p.Y = (int)b;
             return p;
-        }
-        public void wPointdraw(Point p1, Point p2)
-        {
-            g.DrawLine(pen1, p1.X, p1.Y, p2.X, p2.Y);
         }
         private void рандомныйКругToolStripMenuItem_Click(object sender, EventArgs e)
         {
