@@ -273,6 +273,7 @@ namespace laba10
             trackBar1.Value = 50;
             if (trackbarvis())
             {
+                editapp = "Контраст";
             }
         }
 
@@ -281,7 +282,7 @@ namespace laba10
             trackBar1.Value = 50;
             if (trackbarvis())
             {
-                
+                editapp = "Насыщенность";
             }
         }
 
@@ -290,7 +291,7 @@ namespace laba10
             trackBar1.Value = 50;
             if (trackbarvis())
             {
-                
+                editapp = "Резкость";
             }
         }
 
@@ -299,7 +300,7 @@ namespace laba10
             trackBar1.Value = 0;
             if (trackbarvis())
             {
-                
+                editapp = "Шум";
             }
         }
         int bri = 0;
@@ -313,6 +314,11 @@ namespace laba10
                 IFilter bright = new BrightnessCorrection(trackBar1.Value - bri);
                 pictureBox1.Image = bright.Apply(image);
             }
+            if(editapp == "Контраст") { }
+            if(editapp == "Насыщенность") { }
+            if(editapp == "Резкость") { }
+            if(editapp == "Шум") { }
+
         }
     }
 }
