@@ -31,7 +31,7 @@ namespace laba11
 
         private void button2_Click(object sender, EventArgs e)
         {
-            XmlDocument xdoc = new XmlDocument();
+            
             SaveFileDialog svd = new SaveFileDialog();
             svd.Title = "Сохранить xml как...";
             svd.OverwritePrompt = true;
@@ -42,7 +42,21 @@ namespace laba11
             {
                 try
                 {
-                    xdoc.Save(svd.FileName);
+                    XmlTextWriter wr = new XmlTextWriter(svd.FileName, Encoding.UTF8);
+                    wr.WriteStartDocument();
+                    wr.WriteStartElement("ИВТ-19-1");
+                        wr.WriteStartElement("Студенты");
+                            wr.WriteStartElement("Студент");
+                                wr.WriteAttributeString("Номер_Студки", "191256");
+                                wr.WriteAttributeString("Имя", "Денис");
+                                wr.WriteAttributeString("Фамилия", "Осипов");
+                                wr.WriteAttributeString("Курс", "3");
+                                wr.WriteAttributeString("Стипендия", "7000");
+                            wr.WriteEndElement();
+                        wr.WriteEndElement();
+                    wr.WriteEndElement();
+                    wr.WriteEndDocument();
+                    wr.Close();
                 }
                 catch
                 {

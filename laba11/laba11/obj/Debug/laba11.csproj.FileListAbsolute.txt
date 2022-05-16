@@ -9,3 +9,14 @@ D:\github\cloud\laba11\laba11\obj\Debug\laba11.csproj.GenerateResource.cache
 D:\github\cloud\laba11\laba11\obj\Debug\laba11.csproj.CoreCompileInputs.cache
 D:\github\cloud\laba11\laba11\obj\Debug\laba11.exe
 D:\github\cloud\laba11\laba11\obj\Debug\laba11.pdb
+C:\Users\Student\Desktop\cloud\laba11\laba11\bin\Debug\laba11.exe.config
+C:\Users\Student\Desktop\cloud\laba11\laba11\bin\Debug\laba11.exe
+C:\Users\Student\Desktop\cloud\laba11\laba11\bin\Debug\laba11.pdb
+C:\Users\Student\Desktop\cloud\laba11\laba11\obj\Debug\laba11.csproj.AssemblyReference.cache
+C:\Users\Student\Desktop\cloud\laba11\laba11\obj\Debug\laba11.addfrm.resources
+C:\Users\Student\Desktop\cloud\laba11\laba11\obj\Debug\laba11.Form1.resources
+C:\Users\Student\Desktop\cloud\laba11\laba11\obj\Debug\laba11.Properties.Resources.resources
+C:\Users\Student\Desktop\cloud\laba11\laba11\obj\Debug\laba11.csproj.GenerateResource.cache
+C:\Users\Student\Desktop\cloud\laba11\laba11\obj\Debug\laba11.csproj.CoreCompileInputs.cache
+C:\Users\Student\Desktop\cloud\laba11\laba11\obj\Debug\laba11.exe
+C:\Users\Student\Desktop\cloud\laba11\laba11\obj\Debug\laba11.pdb
