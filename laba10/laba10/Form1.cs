@@ -9,7 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Drawing.Drawing2D;
 using System.Drawing.Imaging;
-
+using Accord.Imaging;
+using Accord.Imaging.Filters;
 namespace laba10
 {
     public partial class Form1 : Form
@@ -27,6 +28,7 @@ namespace laba10
         Point p2;
         bool cl1 = true;
         bool cl2 = false;
+        string editapp;
         public void новоеToolStripMenuItem_Click(object sender, EventArgs e)
         {
             image = new Bitmap(pictureBox1.Width, pictureBox1.Height);
@@ -152,8 +154,6 @@ namespace laba10
                 MessageBox.Show("Создайте новый холст или откройте изображение");
             }
             pictureBox1.Invalidate();
-            label1.Text = p1.X.ToString() + " " + p1.Y.ToString();
-            label2.Text = p2.X.ToString() + " " + p2.Y.ToString();
         }
         public static double DistanceBetweenTwoPoints(Point point1, Point point2)
         {
@@ -219,11 +219,6 @@ namespace laba10
             pen = new Pen(Randcolor(), 3.0f);
         }
 
-        private void pictureBox1_MouseMove(object sender, MouseEventArgs e)
-        {
-            
-        }
-
         private void кругиНаОтрезкеToolStripMenuItem_Click(object sender, EventArgs e)
         {
             b = null;
@@ -240,6 +235,83 @@ namespace laba10
             else
             {
                 cl2 = false;
+            }
+        }
+        public bool trackbarvis()
+        {
+            bool p = false;
+            if (g != null)
+            {
+                trackBar1.Visible = true;
+                label1.Text = trackBar1.Value.ToString();
+                p = true;
+            }
+            else
+            {
+                MessageBox.Show("Создайте новый холст или откройте изображение");
+            }
+            return p;
+        }
+        private void рисованиеToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            trackBar1.Visible = false;
+        }
+
+        private void яркостьToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            trackBar1.Value = 50;
+            if (trackbarvis())
+            {
+                editapp = "Яркость";
+                bri = trackBar1.Value;
+            }
+
+        }
+
+        private void контрастToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            trackBar1.Value = 50;
+            if (trackbarvis())
+            {
+            }
+        }
+
+        private void насыщенностьToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            trackBar1.Value = 50;
+            if (trackbarvis())
+            {
+                
+            }
+        }
+
+        private void резкостьToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            trackBar1.Value = 50;
+            if (trackbarvis())
+            {
+                
+            }
+        }
+
+        private void удалениеШумовToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            trackBar1.Value = 0;
+            if (trackbarvis())
+            {
+                
+            }
+        }
+        int bri = 0;
+        private void trackBar1_Scroll(object sender, EventArgs e)
+        {
+            label1.Text = trackBar1.Value.ToString();
+            if (editapp == "Яркость")
+            {
+                //bri = trackBar1.Value;
+                image = (Bitmap)pictureBox1.Image;
+                IFilter bright = new BrightnessCorrection(trackBar1.Value - bri);
+                pictureBox1.Image = bright.Apply(image);
             }
         }
     }

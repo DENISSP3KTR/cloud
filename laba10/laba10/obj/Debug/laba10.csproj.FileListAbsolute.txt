@@ -18,3 +18,15 @@ C:\Users\Student\Desktop\cloud\laba10\laba10\obj\Debug\laba10.csproj.GenerateRes
 C:\Users\Student\Desktop\cloud\laba10\laba10\obj\Debug\laba10.csproj.CoreCompileInputs.cache
 C:\Users\Student\Desktop\cloud\laba10\laba10\obj\Debug\laba10.exe
 C:\Users\Student\Desktop\cloud\laba10\laba10\obj\Debug\laba10.pdb
+D:\github\cloud\laba10\laba10\bin\Debug\Accord.dll.config
+D:\github\cloud\laba10\laba10\bin\Debug\Accord.dll
+D:\github\cloud\laba10\laba10\bin\Debug\Accord.Imaging.dll
+D:\github\cloud\laba10\laba10\bin\Debug\Accord.Math.Core.dll
+D:\github\cloud\laba10\laba10\bin\Debug\Accord.Math.dll
+D:\github\cloud\laba10\laba10\bin\Debug\Accord.Statistics.dll
+D:\github\cloud\laba10\laba10\bin\Debug\Accord.xml
+D:\github\cloud\laba10\laba10\bin\Debug\Accord.Imaging.xml
+D:\github\cloud\laba10\laba10\bin\Debug\Accord.Math.xml
+D:\github\cloud\laba10\laba10\bin\Debug\Accord.Math.Core.xml
+D:\github\cloud\laba10\laba10\bin\Debug\Accord.Statistics.xml
+D:\github\cloud\laba10\laba10\obj\Debug\laba10.csproj.CopyComplete
