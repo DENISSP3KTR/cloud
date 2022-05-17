@@ -242,8 +242,7 @@ namespace laba10
             bool p = false;
             if (g != null)
             {
-                trackBar1.Visible = true;
-                label1.Text = trackBar1.Value.ToString();
+                numericUpDown1.Visible = true;
                 p = true;
             }
             else
@@ -254,41 +253,44 @@ namespace laba10
         }
         private void рисованиеToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            trackBar1.Visible = false;
+            numericUpDown1.Visible = false;
         }
 
         private void яркостьToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            trackBar1.Value = 50;
+            numericUpDown1.Value = 50;
             if (trackbarvis())
             {
                 editapp = "Яркость";
-                bri = trackBar1.Value;
+                image = (Bitmap)pictureBox1.Image;
             }
 
         }
 
         private void контрастToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            trackBar1.Value = 50;
+            numericUpDown1.Value = 50;
             if (trackbarvis())
             {
                 editapp = "Контраст";
+                image = (Bitmap)pictureBox1.Image;
             }
         }
 
         private void насыщенностьToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            trackBar1.Value = 50;
+            numericUpDown1.Value = 50;
             if (trackbarvis())
             {
                 editapp = "Насыщенность";
+                image = (Bitmap)pictureBox1.Image;
             }
         }
 
         private void резкостьToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            trackBar1.Value = 50;
+            numericUpDown1.Value = 50;
+            image = (Bitmap)pictureBox1.Image;
             if (trackbarvis())
             {
                 editapp = "Резкость";
@@ -297,28 +299,80 @@ namespace laba10
 
         private void удалениеШумовToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            trackBar1.Value = 0;
+            numericUpDown1.Value = 0;
+            image = (Bitmap)pictureBox1.Image;
             if (trackbarvis())
             {
                 editapp = "Шум";
+                Bitmap image2 = image;
+                IFilter shum = new BilateralSmoothing();
+                pictureBox1.Image = shum.Apply(image2);
             }
         }
         int bri = 0;
-        private void trackBar1_Scroll(object sender, EventArgs e)
+
+        //private void trackBar1_ValueChanged(object sender, EventArgs e)
+        //{
+        //    if (editapp == "Яркость")
+        //    {
+        //        //bri = trackBar1.Value;
+        //        image = (Bitmap)pictureBox1.Image;
+        //        IFilter bright = new BrightnessCorrection(bri);
+        //        pictureBox1.Image = bright.Apply(image);
+        //    }
+        //}
+
+        private void button1_Click(object sender, EventArgs e)
         {
-            label1.Text = trackBar1.Value.ToString();
             if (editapp == "Яркость")
             {
-                //bri = trackBar1.Value;
-                image = (Bitmap)pictureBox1.Image;
-                IFilter bright = new BrightnessCorrection(trackBar1.Value - bri);
-                pictureBox1.Image = bright.Apply(image);
+                Bitmap image2 = image;
+                IFilter bright = new BrightnessCorrection((int)(numericUpDown1.Value - 50));
+                pictureBox1.Image = bright.Apply(image2);
             }
-            if(editapp == "Контраст") { }
-            if(editapp == "Насыщенность") { }
-            if(editapp == "Резкость") { }
-            if(editapp == "Шум") { }
+            if (editapp == "Контраст")
+            {
+                Bitmap image2 = image;
+                IFilter contrast = new ContrastCorrection((int)(numericUpDown1.Value - 50));
+                pictureBox1.Image = contrast.Apply(image2);
+            }
+            
+            if (editapp == "Насыщенность")
+            {
+                Bitmap image2 = image;
+                IFilter satur = new SaturationCorrection((int)(numericUpDown1.Value - 50));
+                pictureBox1.Image = satur.Apply(image2);
+            }
+            if (editapp == "Резкость")
+            {
+                Bitmap image2 = image;
+                bri = (int)numericUpDown1.Value;
+                int[,] kernel = {
+{ -1*bri,  -1*bri,  -1*bri },
+{ -1*bri,   9*bri,  -1*bri },
+{ -1*bri,  -1*bri,  -1*bri } };
+                IFilter sharp = new Convolution(kernel);
+                pictureBox1.Image = sharp.Apply(image2);
+            }
+        }
 
+        private void размерToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            numericUpDown2.Visible = true;
+            numericUpDown3.Visible = true;
+            button2.Visible = true;
+            numericUpDown2.Maximum = image.Width + 1;
+            numericUpDown3.Maximum = image.Height + 1;
+            numericUpDown2.Value = image.Width;
+            numericUpDown3.Value = image.Height;
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            image = (Bitmap)pictureBox1.Image;
+            Bitmap image2 = image;
+            IFilter resize = new ResizeBilinear((int)numericUpDown2.Value, (int)numericUpDown3.Value);
+            pictureBox1.Image = resize.Apply(image2);
         }
     }
 }
