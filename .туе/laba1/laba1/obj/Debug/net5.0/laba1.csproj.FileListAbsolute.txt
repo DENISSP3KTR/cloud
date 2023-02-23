@@ -1,0 +1,16 @@
+F:\мучеба\.net\laba1\laba1\bin\Debug\net5.0\laba1.exe
+F:\мучеба\.net\laba1\laba1\bin\Debug\net5.0\laba1.deps.json
+F:\мучеба\.net\laba1\laba1\bin\Debug\net5.0\laba1.runtimeconfig.json
+F:\мучеба\.net\laba1\laba1\bin\Debug\net5.0\laba1.runtimeconfig.dev.json
+F:\мучеба\.net\laba1\laba1\bin\Debug\net5.0\laba1.dll
+F:\мучеба\.net\laba1\laba1\bin\Debug\net5.0\ref\laba1.dll
+F:\мучеба\.net\laba1\laba1\bin\Debug\net5.0\laba1.pdb
+F:\мучеба\.net\laba1\laba1\obj\Debug\net5.0\laba1.csproj.AssemblyReference.cache
+F:\мучеба\.net\laba1\laba1\obj\Debug\net5.0\laba1.GeneratedMSBuildEditorConfig.editorconfig
+F:\мучеба\.net\laba1\laba1\obj\Debug\net5.0\laba1.AssemblyInfoInputs.cache
+F:\мучеба\.net\laba1\laba1\obj\Debug\net5.0\laba1.AssemblyInfo.cs
+F:\мучеба\.net\laba1\laba1\obj\Debug\net5.0\laba1.csproj.CoreCompileInputs.cache
+F:\мучеба\.net\laba1\laba1\obj\Debug\net5.0\laba1.dll
+F:\мучеба\.net\laba1\laba1\obj\Debug\net5.0\ref\laba1.dll
+F:\мучеба\.net\laba1\laba1\obj\Debug\net5.0\laba1.pdb
+F:\мучеба\.net\laba1\laba1\obj\Debug\net5.0\laba1.genruntimeconfig.cache
