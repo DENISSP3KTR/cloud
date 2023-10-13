@@ -29,21 +29,17 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.roundButton11 = new Kalkulator.Elements.RoundButton();
-            this.roundButton12 = new Kalkulator.Elements.RoundButton();
-            this.roundButton13 = new Kalkulator.Elements.RoundButton();
-            this.roundButton14 = new Kalkulator.Elements.RoundButton();
-            this.roundButton15 = new Kalkulator.Elements.RoundButton();
-            this.roundButton6 = new Kalkulator.Elements.RoundButton();
+            this.summab = new Kalkulator.Elements.RoundButton();
+            this.lnb = new Kalkulator.Elements.RoundButton();
             this.roundButton7 = new Kalkulator.Elements.RoundButton();
-            this.roundButton8 = new Kalkulator.Elements.RoundButton();
-            this.roundButton9 = new Kalkulator.Elements.RoundButton();
-            this.roundButton10 = new Kalkulator.Elements.RoundButton();
-            this.roundButton5 = new Kalkulator.Elements.RoundButton();
-            this.roundButton1 = new Kalkulator.Elements.RoundButton();
-            this.roundButton2 = new Kalkulator.Elements.RoundButton();
-            this.roundButton3 = new Kalkulator.Elements.RoundButton();
-            this.roundButton4 = new Kalkulator.Elements.RoundButton();
+            this.sqrtb = new Kalkulator.Elements.RoundButton();
+            this.logb = new Kalkulator.Elements.RoundButton();
+            this.expxb = new Kalkulator.Elements.RoundButton();
+            this.squareb = new Kalkulator.Elements.RoundButton();
+            this.sinb = new Kalkulator.Elements.RoundButton();
+            this.tanb = new Kalkulator.Elements.RoundButton();
+            this.factorialb = new Kalkulator.Elements.RoundButton();
+            this.cosb = new Kalkulator.Elements.RoundButton();
             this.bequals = new Kalkulator.Elements.RoundButton();
             this.bdiv = new Kalkulator.Elements.RoundButton();
             this.bminus = new Kalkulator.Elements.RoundButton();
@@ -64,26 +60,25 @@
             this.b9 = new Kalkulator.Elements.RoundButton();
             this.b7 = new Kalkulator.Elements.RoundButton();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.ActionBuff = new System.Windows.Forms.TextBox();
+            this.maintextbox = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.roundButton11);
-            this.panel1.Controls.Add(this.roundButton12);
-            this.panel1.Controls.Add(this.roundButton13);
-            this.panel1.Controls.Add(this.roundButton14);
-            this.panel1.Controls.Add(this.roundButton15);
-            this.panel1.Controls.Add(this.roundButton6);
+            this.panel1.Controls.Add(this.summab);
+            this.panel1.Controls.Add(this.lnb);
             this.panel1.Controls.Add(this.roundButton7);
-            this.panel1.Controls.Add(this.roundButton8);
-            this.panel1.Controls.Add(this.roundButton9);
-            this.panel1.Controls.Add(this.roundButton10);
-            this.panel1.Controls.Add(this.roundButton5);
-            this.panel1.Controls.Add(this.roundButton1);
-            this.panel1.Controls.Add(this.roundButton2);
-            this.panel1.Controls.Add(this.roundButton3);
-            this.panel1.Controls.Add(this.roundButton4);
+            this.panel1.Controls.Add(this.sqrtb);
+            this.panel1.Controls.Add(this.logb);
+            this.panel1.Controls.Add(this.expxb);
+            this.panel1.Controls.Add(this.squareb);
+            this.panel1.Controls.Add(this.sinb);
+            this.panel1.Controls.Add(this.tanb);
+            this.panel1.Controls.Add(this.factorialb);
+            this.panel1.Controls.Add(this.cosb);
             this.panel1.Controls.Add(this.bequals);
             this.panel1.Controls.Add(this.bdiv);
             this.panel1.Controls.Add(this.bminus);
@@ -104,142 +99,54 @@
             this.panel1.Controls.Add(this.b9);
             this.panel1.Controls.Add(this.b7);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 84);
+            this.panel1.Location = new System.Drawing.Point(0, 83);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(428, 274);
+            this.panel1.Size = new System.Drawing.Size(428, 225);
             this.panel1.TabIndex = 19;
             // 
-            // roundButton11
+            // summab
             // 
-            this.roundButton11.BackColor = System.Drawing.SystemColors.WindowFrame;
-            this.roundButton11.BorderColor = System.Drawing.Color.Transparent;
-            this.roundButton11.ButtonColor = System.Drawing.SystemColors.WindowText;
-            this.roundButton11.FlatAppearance.BorderSize = 0;
-            this.roundButton11.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.roundButton11.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.roundButton11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.roundButton11.Font = new System.Drawing.Font("Rubik", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.roundButton11.ForeColor = System.Drawing.Color.Transparent;
-            this.roundButton11.Location = new System.Drawing.Point(3, 219);
-            this.roundButton11.Name = "roundButton11";
-            this.roundButton11.OnHoverBorderColor = System.Drawing.Color.Transparent;
-            this.roundButton11.OnHoverButtonColor = System.Drawing.Color.DimGray;
-            this.roundButton11.OnHoverTextColor = System.Drawing.Color.White;
-            this.roundButton11.Size = new System.Drawing.Size(54, 39);
-            this.roundButton11.TabIndex = 52;
-            this.roundButton11.Text = "ln";
-            this.roundButton11.TextColor = System.Drawing.Color.White;
-            this.roundButton11.UseVisualStyleBackColor = true;
+            this.summab.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.summab.BorderColor = System.Drawing.Color.Transparent;
+            this.summab.ButtonColor = System.Drawing.SystemColors.WindowText;
+            this.summab.FlatAppearance.BorderSize = 0;
+            this.summab.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.summab.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.summab.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.summab.Font = new System.Drawing.Font("Rubik", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.summab.ForeColor = System.Drawing.Color.Transparent;
+            this.summab.Location = new System.Drawing.Point(3, 3);
+            this.summab.Name = "summab";
+            this.summab.OnHoverBorderColor = System.Drawing.Color.Transparent;
+            this.summab.OnHoverButtonColor = System.Drawing.Color.DimGray;
+            this.summab.OnHoverTextColor = System.Drawing.Color.White;
+            this.summab.Size = new System.Drawing.Size(54, 39);
+            this.summab.TabIndex = 50;
+            this.summab.Text = "∑";
+            this.summab.TextColor = System.Drawing.Color.White;
+            this.summab.UseVisualStyleBackColor = true;
             // 
-            // roundButton12
+            // lnb
             // 
-            this.roundButton12.BackColor = System.Drawing.SystemColors.WindowFrame;
-            this.roundButton12.BorderColor = System.Drawing.Color.Transparent;
-            this.roundButton12.ButtonColor = System.Drawing.SystemColors.WindowText;
-            this.roundButton12.FlatAppearance.BorderSize = 0;
-            this.roundButton12.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.roundButton12.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.roundButton12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.roundButton12.Font = new System.Drawing.Font("Rubik", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.roundButton12.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.roundButton12.Location = new System.Drawing.Point(3, 3);
-            this.roundButton12.Name = "roundButton12";
-            this.roundButton12.OnHoverBorderColor = System.Drawing.SystemColors.WindowFrame;
-            this.roundButton12.OnHoverButtonColor = System.Drawing.Color.WhiteSmoke;
-            this.roundButton12.OnHoverTextColor = System.Drawing.Color.Black;
-            this.roundButton12.Size = new System.Drawing.Size(54, 39);
-            this.roundButton12.TabIndex = 51;
-            this.roundButton12.Text = "π";
-            this.roundButton12.TextColor = System.Drawing.Color.White;
-            this.roundButton12.UseVisualStyleBackColor = true;
-            // 
-            // roundButton13
-            // 
-            this.roundButton13.BackColor = System.Drawing.SystemColors.WindowFrame;
-            this.roundButton13.BorderColor = System.Drawing.Color.Transparent;
-            this.roundButton13.ButtonColor = System.Drawing.SystemColors.WindowText;
-            this.roundButton13.FlatAppearance.BorderSize = 0;
-            this.roundButton13.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.roundButton13.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.roundButton13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.roundButton13.Font = new System.Drawing.Font("Rubik", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.roundButton13.ForeColor = System.Drawing.Color.Transparent;
-            this.roundButton13.Location = new System.Drawing.Point(3, 111);
-            this.roundButton13.Name = "roundButton13";
-            this.roundButton13.OnHoverBorderColor = System.Drawing.Color.Transparent;
-            this.roundButton13.OnHoverButtonColor = System.Drawing.Color.DimGray;
-            this.roundButton13.OnHoverTextColor = System.Drawing.Color.White;
-            this.roundButton13.Size = new System.Drawing.Size(54, 39);
-            this.roundButton13.TabIndex = 49;
-            this.roundButton13.Text = "√x";
-            this.roundButton13.TextColor = System.Drawing.Color.White;
-            this.roundButton13.UseVisualStyleBackColor = true;
-            // 
-            // roundButton14
-            // 
-            this.roundButton14.BackColor = System.Drawing.SystemColors.WindowFrame;
-            this.roundButton14.BorderColor = System.Drawing.Color.Transparent;
-            this.roundButton14.ButtonColor = System.Drawing.SystemColors.WindowText;
-            this.roundButton14.FlatAppearance.BorderSize = 0;
-            this.roundButton14.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.roundButton14.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.roundButton14.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.roundButton14.Font = new System.Drawing.Font("Rubik", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.roundButton14.ForeColor = System.Drawing.Color.Transparent;
-            this.roundButton14.Location = new System.Drawing.Point(3, 165);
-            this.roundButton14.Name = "roundButton14";
-            this.roundButton14.OnHoverBorderColor = System.Drawing.Color.Transparent;
-            this.roundButton14.OnHoverButtonColor = System.Drawing.Color.DimGray;
-            this.roundButton14.OnHoverTextColor = System.Drawing.Color.White;
-            this.roundButton14.Size = new System.Drawing.Size(54, 39);
-            this.roundButton14.TabIndex = 48;
-            this.roundButton14.Text = "log";
-            this.roundButton14.TextColor = System.Drawing.Color.White;
-            this.roundButton14.UseVisualStyleBackColor = true;
-            // 
-            // roundButton15
-            // 
-            this.roundButton15.BackColor = System.Drawing.SystemColors.WindowFrame;
-            this.roundButton15.BorderColor = System.Drawing.Color.Transparent;
-            this.roundButton15.ButtonColor = System.Drawing.SystemColors.WindowText;
-            this.roundButton15.FlatAppearance.BorderSize = 0;
-            this.roundButton15.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.roundButton15.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.roundButton15.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.roundButton15.Font = new System.Drawing.Font("Rubik", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.roundButton15.ForeColor = System.Drawing.Color.Transparent;
-            this.roundButton15.Location = new System.Drawing.Point(3, 57);
-            this.roundButton15.Name = "roundButton15";
-            this.roundButton15.OnHoverBorderColor = System.Drawing.Color.Transparent;
-            this.roundButton15.OnHoverButtonColor = System.Drawing.Color.DimGray;
-            this.roundButton15.OnHoverTextColor = System.Drawing.Color.White;
-            this.roundButton15.Size = new System.Drawing.Size(54, 39);
-            this.roundButton15.TabIndex = 50;
-            this.roundButton15.Text = "∑";
-            this.roundButton15.TextColor = System.Drawing.Color.White;
-            this.roundButton15.UseVisualStyleBackColor = true;
-            // 
-            // roundButton6
-            // 
-            this.roundButton6.BackColor = System.Drawing.SystemColors.WindowFrame;
-            this.roundButton6.BorderColor = System.Drawing.Color.Transparent;
-            this.roundButton6.ButtonColor = System.Drawing.SystemColors.WindowText;
-            this.roundButton6.FlatAppearance.BorderSize = 0;
-            this.roundButton6.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.roundButton6.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.roundButton6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.roundButton6.Font = new System.Drawing.Font("Rubik", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.roundButton6.ForeColor = System.Drawing.Color.Transparent;
-            this.roundButton6.Location = new System.Drawing.Point(63, 219);
-            this.roundButton6.Name = "roundButton6";
-            this.roundButton6.OnHoverBorderColor = System.Drawing.Color.Transparent;
-            this.roundButton6.OnHoverButtonColor = System.Drawing.Color.DimGray;
-            this.roundButton6.OnHoverTextColor = System.Drawing.Color.White;
-            this.roundButton6.Size = new System.Drawing.Size(54, 39);
-            this.roundButton6.TabIndex = 47;
-            this.roundButton6.Text = "ln";
-            this.roundButton6.TextColor = System.Drawing.Color.White;
-            this.roundButton6.UseVisualStyleBackColor = true;
+            this.lnb.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.lnb.BorderColor = System.Drawing.Color.Transparent;
+            this.lnb.ButtonColor = System.Drawing.SystemColors.WindowText;
+            this.lnb.FlatAppearance.BorderSize = 0;
+            this.lnb.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.lnb.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.lnb.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lnb.Font = new System.Drawing.Font("Rubik", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lnb.ForeColor = System.Drawing.Color.Transparent;
+            this.lnb.Location = new System.Drawing.Point(63, 183);
+            this.lnb.Name = "lnb";
+            this.lnb.OnHoverBorderColor = System.Drawing.Color.Transparent;
+            this.lnb.OnHoverButtonColor = System.Drawing.Color.DimGray;
+            this.lnb.OnHoverTextColor = System.Drawing.Color.White;
+            this.lnb.Size = new System.Drawing.Size(54, 39);
+            this.lnb.TabIndex = 47;
+            this.lnb.Text = "ln";
+            this.lnb.TextColor = System.Drawing.Color.White;
+            this.lnb.UseVisualStyleBackColor = true;
             // 
             // roundButton7
             // 
@@ -263,181 +170,181 @@
             this.roundButton7.TextColor = System.Drawing.Color.White;
             this.roundButton7.UseVisualStyleBackColor = true;
             // 
-            // roundButton8
+            // sqrtb
             // 
-            this.roundButton8.BackColor = System.Drawing.SystemColors.WindowFrame;
-            this.roundButton8.BorderColor = System.Drawing.Color.Transparent;
-            this.roundButton8.ButtonColor = System.Drawing.SystemColors.WindowText;
-            this.roundButton8.FlatAppearance.BorderSize = 0;
-            this.roundButton8.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.roundButton8.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.roundButton8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.roundButton8.Font = new System.Drawing.Font("Rubik", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.roundButton8.ForeColor = System.Drawing.Color.Transparent;
-            this.roundButton8.Location = new System.Drawing.Point(63, 111);
-            this.roundButton8.Name = "roundButton8";
-            this.roundButton8.OnHoverBorderColor = System.Drawing.Color.Transparent;
-            this.roundButton8.OnHoverButtonColor = System.Drawing.Color.DimGray;
-            this.roundButton8.OnHoverTextColor = System.Drawing.Color.White;
-            this.roundButton8.Size = new System.Drawing.Size(54, 39);
-            this.roundButton8.TabIndex = 44;
-            this.roundButton8.Text = "√x";
-            this.roundButton8.TextColor = System.Drawing.Color.White;
-            this.roundButton8.UseVisualStyleBackColor = true;
+            this.sqrtb.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.sqrtb.BorderColor = System.Drawing.Color.Transparent;
+            this.sqrtb.ButtonColor = System.Drawing.SystemColors.WindowText;
+            this.sqrtb.FlatAppearance.BorderSize = 0;
+            this.sqrtb.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.sqrtb.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.sqrtb.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.sqrtb.Font = new System.Drawing.Font("Rubik", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.sqrtb.ForeColor = System.Drawing.Color.Transparent;
+            this.sqrtb.Location = new System.Drawing.Point(63, 93);
+            this.sqrtb.Name = "sqrtb";
+            this.sqrtb.OnHoverBorderColor = System.Drawing.Color.Transparent;
+            this.sqrtb.OnHoverButtonColor = System.Drawing.Color.DimGray;
+            this.sqrtb.OnHoverTextColor = System.Drawing.Color.White;
+            this.sqrtb.Size = new System.Drawing.Size(54, 39);
+            this.sqrtb.TabIndex = 44;
+            this.sqrtb.Text = "√x";
+            this.sqrtb.TextColor = System.Drawing.Color.White;
+            this.sqrtb.UseVisualStyleBackColor = true;
             // 
-            // roundButton9
+            // logb
             // 
-            this.roundButton9.BackColor = System.Drawing.SystemColors.WindowFrame;
-            this.roundButton9.BorderColor = System.Drawing.Color.Transparent;
-            this.roundButton9.ButtonColor = System.Drawing.SystemColors.WindowText;
-            this.roundButton9.FlatAppearance.BorderSize = 0;
-            this.roundButton9.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.roundButton9.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.roundButton9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.roundButton9.Font = new System.Drawing.Font("Rubik", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.roundButton9.ForeColor = System.Drawing.Color.Transparent;
-            this.roundButton9.Location = new System.Drawing.Point(63, 165);
-            this.roundButton9.Name = "roundButton9";
-            this.roundButton9.OnHoverBorderColor = System.Drawing.Color.Transparent;
-            this.roundButton9.OnHoverButtonColor = System.Drawing.Color.DimGray;
-            this.roundButton9.OnHoverTextColor = System.Drawing.Color.White;
-            this.roundButton9.Size = new System.Drawing.Size(54, 39);
-            this.roundButton9.TabIndex = 43;
-            this.roundButton9.Text = "log";
-            this.roundButton9.TextColor = System.Drawing.Color.White;
-            this.roundButton9.UseVisualStyleBackColor = true;
+            this.logb.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.logb.BorderColor = System.Drawing.Color.Transparent;
+            this.logb.ButtonColor = System.Drawing.SystemColors.WindowText;
+            this.logb.FlatAppearance.BorderSize = 0;
+            this.logb.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.logb.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.logb.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.logb.Font = new System.Drawing.Font("Rubik", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.logb.ForeColor = System.Drawing.Color.Transparent;
+            this.logb.Location = new System.Drawing.Point(63, 138);
+            this.logb.Name = "logb";
+            this.logb.OnHoverBorderColor = System.Drawing.Color.Transparent;
+            this.logb.OnHoverButtonColor = System.Drawing.Color.DimGray;
+            this.logb.OnHoverTextColor = System.Drawing.Color.White;
+            this.logb.Size = new System.Drawing.Size(54, 39);
+            this.logb.TabIndex = 43;
+            this.logb.Text = "log";
+            this.logb.TextColor = System.Drawing.Color.White;
+            this.logb.UseVisualStyleBackColor = true;
             // 
-            // roundButton10
+            // expxb
             // 
-            this.roundButton10.BackColor = System.Drawing.SystemColors.WindowFrame;
-            this.roundButton10.BorderColor = System.Drawing.Color.Transparent;
-            this.roundButton10.ButtonColor = System.Drawing.SystemColors.WindowText;
-            this.roundButton10.FlatAppearance.BorderSize = 0;
-            this.roundButton10.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.roundButton10.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.roundButton10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.roundButton10.Font = new System.Drawing.Font("Rubik", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.roundButton10.ForeColor = System.Drawing.Color.Transparent;
-            this.roundButton10.Location = new System.Drawing.Point(63, 57);
-            this.roundButton10.Name = "roundButton10";
-            this.roundButton10.OnHoverBorderColor = System.Drawing.Color.Transparent;
-            this.roundButton10.OnHoverButtonColor = System.Drawing.Color.DimGray;
-            this.roundButton10.OnHoverTextColor = System.Drawing.Color.White;
-            this.roundButton10.Size = new System.Drawing.Size(54, 39);
-            this.roundButton10.TabIndex = 45;
-            this.roundButton10.Text = "e";
-            this.roundButton10.TextColor = System.Drawing.Color.White;
-            this.roundButton10.UseVisualStyleBackColor = true;
+            this.expxb.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.expxb.BorderColor = System.Drawing.Color.Transparent;
+            this.expxb.ButtonColor = System.Drawing.SystemColors.WindowText;
+            this.expxb.FlatAppearance.BorderSize = 0;
+            this.expxb.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.expxb.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.expxb.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.expxb.Font = new System.Drawing.Font("Rubik", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.expxb.ForeColor = System.Drawing.Color.Transparent;
+            this.expxb.Location = new System.Drawing.Point(63, 48);
+            this.expxb.Name = "expxb";
+            this.expxb.OnHoverBorderColor = System.Drawing.Color.Transparent;
+            this.expxb.OnHoverButtonColor = System.Drawing.Color.DimGray;
+            this.expxb.OnHoverTextColor = System.Drawing.Color.White;
+            this.expxb.Size = new System.Drawing.Size(54, 39);
+            this.expxb.TabIndex = 45;
+            this.expxb.Text = "exp(x)";
+            this.expxb.TextColor = System.Drawing.Color.White;
+            this.expxb.UseVisualStyleBackColor = true;
             // 
-            // roundButton5
+            // squareb
             // 
-            this.roundButton5.BackColor = System.Drawing.SystemColors.WindowFrame;
-            this.roundButton5.BorderColor = System.Drawing.Color.Transparent;
-            this.roundButton5.ButtonColor = System.Drawing.SystemColors.WindowText;
-            this.roundButton5.FlatAppearance.BorderSize = 0;
-            this.roundButton5.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.roundButton5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.roundButton5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.roundButton5.Font = new System.Drawing.Font("Rubik", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.roundButton5.ForeColor = System.Drawing.Color.Transparent;
-            this.roundButton5.Location = new System.Drawing.Point(123, 219);
-            this.roundButton5.Name = "roundButton5";
-            this.roundButton5.OnHoverBorderColor = System.Drawing.Color.Transparent;
-            this.roundButton5.OnHoverButtonColor = System.Drawing.Color.DimGray;
-            this.roundButton5.OnHoverTextColor = System.Drawing.Color.White;
-            this.roundButton5.Size = new System.Drawing.Size(54, 39);
-            this.roundButton5.TabIndex = 42;
-            this.roundButton5.Text = "x²";
-            this.roundButton5.TextColor = System.Drawing.Color.White;
-            this.roundButton5.UseVisualStyleBackColor = true;
+            this.squareb.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.squareb.BorderColor = System.Drawing.Color.Transparent;
+            this.squareb.ButtonColor = System.Drawing.SystemColors.WindowText;
+            this.squareb.FlatAppearance.BorderSize = 0;
+            this.squareb.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.squareb.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.squareb.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.squareb.Font = new System.Drawing.Font("Rubik", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.squareb.ForeColor = System.Drawing.Color.Transparent;
+            this.squareb.Location = new System.Drawing.Point(123, 183);
+            this.squareb.Name = "squareb";
+            this.squareb.OnHoverBorderColor = System.Drawing.Color.Transparent;
+            this.squareb.OnHoverButtonColor = System.Drawing.Color.DimGray;
+            this.squareb.OnHoverTextColor = System.Drawing.Color.White;
+            this.squareb.Size = new System.Drawing.Size(54, 39);
+            this.squareb.TabIndex = 42;
+            this.squareb.Text = "x²";
+            this.squareb.TextColor = System.Drawing.Color.White;
+            this.squareb.UseVisualStyleBackColor = true;
             // 
-            // roundButton1
+            // sinb
             // 
-            this.roundButton1.BackColor = System.Drawing.SystemColors.WindowFrame;
-            this.roundButton1.BorderColor = System.Drawing.Color.Transparent;
-            this.roundButton1.ButtonColor = System.Drawing.SystemColors.WindowText;
-            this.roundButton1.FlatAppearance.BorderSize = 0;
-            this.roundButton1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.roundButton1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.roundButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.roundButton1.Font = new System.Drawing.Font("Rubik", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.roundButton1.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.roundButton1.Location = new System.Drawing.Point(123, 3);
-            this.roundButton1.Name = "roundButton1";
-            this.roundButton1.OnHoverBorderColor = System.Drawing.SystemColors.WindowFrame;
-            this.roundButton1.OnHoverButtonColor = System.Drawing.Color.WhiteSmoke;
-            this.roundButton1.OnHoverTextColor = System.Drawing.Color.Black;
-            this.roundButton1.Size = new System.Drawing.Size(54, 39);
-            this.roundButton1.TabIndex = 41;
-            this.roundButton1.Text = "sin";
-            this.roundButton1.TextColor = System.Drawing.Color.White;
-            this.roundButton1.UseVisualStyleBackColor = true;
+            this.sinb.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.sinb.BorderColor = System.Drawing.Color.Transparent;
+            this.sinb.ButtonColor = System.Drawing.SystemColors.WindowText;
+            this.sinb.FlatAppearance.BorderSize = 0;
+            this.sinb.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.sinb.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.sinb.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.sinb.Font = new System.Drawing.Font("Rubik", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.sinb.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.sinb.Location = new System.Drawing.Point(123, 3);
+            this.sinb.Name = "sinb";
+            this.sinb.OnHoverBorderColor = System.Drawing.SystemColors.WindowFrame;
+            this.sinb.OnHoverButtonColor = System.Drawing.Color.WhiteSmoke;
+            this.sinb.OnHoverTextColor = System.Drawing.Color.Black;
+            this.sinb.Size = new System.Drawing.Size(54, 39);
+            this.sinb.TabIndex = 41;
+            this.sinb.Text = "sin";
+            this.sinb.TextColor = System.Drawing.Color.White;
+            this.sinb.UseVisualStyleBackColor = true;
             // 
-            // roundButton2
+            // tanb
             // 
-            this.roundButton2.BackColor = System.Drawing.SystemColors.WindowFrame;
-            this.roundButton2.BorderColor = System.Drawing.Color.Transparent;
-            this.roundButton2.ButtonColor = System.Drawing.SystemColors.WindowText;
-            this.roundButton2.FlatAppearance.BorderSize = 0;
-            this.roundButton2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.roundButton2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.roundButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.roundButton2.Font = new System.Drawing.Font("Rubik", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.roundButton2.ForeColor = System.Drawing.Color.Transparent;
-            this.roundButton2.Location = new System.Drawing.Point(123, 111);
-            this.roundButton2.Name = "roundButton2";
-            this.roundButton2.OnHoverBorderColor = System.Drawing.Color.Transparent;
-            this.roundButton2.OnHoverButtonColor = System.Drawing.Color.DimGray;
-            this.roundButton2.OnHoverTextColor = System.Drawing.Color.White;
-            this.roundButton2.Size = new System.Drawing.Size(54, 39);
-            this.roundButton2.TabIndex = 39;
-            this.roundButton2.Text = "tan";
-            this.roundButton2.TextColor = System.Drawing.Color.White;
-            this.roundButton2.UseVisualStyleBackColor = true;
+            this.tanb.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.tanb.BorderColor = System.Drawing.Color.Transparent;
+            this.tanb.ButtonColor = System.Drawing.SystemColors.WindowText;
+            this.tanb.FlatAppearance.BorderSize = 0;
+            this.tanb.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.tanb.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.tanb.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.tanb.Font = new System.Drawing.Font("Rubik", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.tanb.ForeColor = System.Drawing.Color.Transparent;
+            this.tanb.Location = new System.Drawing.Point(123, 93);
+            this.tanb.Name = "tanb";
+            this.tanb.OnHoverBorderColor = System.Drawing.Color.Transparent;
+            this.tanb.OnHoverButtonColor = System.Drawing.Color.DimGray;
+            this.tanb.OnHoverTextColor = System.Drawing.Color.White;
+            this.tanb.Size = new System.Drawing.Size(54, 39);
+            this.tanb.TabIndex = 39;
+            this.tanb.Text = "tan";
+            this.tanb.TextColor = System.Drawing.Color.White;
+            this.tanb.UseVisualStyleBackColor = true;
             // 
-            // roundButton3
+            // factorialb
             // 
-            this.roundButton3.BackColor = System.Drawing.SystemColors.WindowFrame;
-            this.roundButton3.BorderColor = System.Drawing.Color.Transparent;
-            this.roundButton3.ButtonColor = System.Drawing.SystemColors.WindowText;
-            this.roundButton3.FlatAppearance.BorderSize = 0;
-            this.roundButton3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.roundButton3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.roundButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.roundButton3.Font = new System.Drawing.Font("Rubik", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.roundButton3.ForeColor = System.Drawing.Color.Transparent;
-            this.roundButton3.Location = new System.Drawing.Point(123, 165);
-            this.roundButton3.Name = "roundButton3";
-            this.roundButton3.OnHoverBorderColor = System.Drawing.Color.Transparent;
-            this.roundButton3.OnHoverButtonColor = System.Drawing.Color.DimGray;
-            this.roundButton3.OnHoverTextColor = System.Drawing.Color.White;
-            this.roundButton3.Size = new System.Drawing.Size(54, 39);
-            this.roundButton3.TabIndex = 38;
-            this.roundButton3.Text = "x!";
-            this.roundButton3.TextColor = System.Drawing.Color.White;
-            this.roundButton3.UseVisualStyleBackColor = true;
+            this.factorialb.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.factorialb.BorderColor = System.Drawing.Color.Transparent;
+            this.factorialb.ButtonColor = System.Drawing.SystemColors.WindowText;
+            this.factorialb.FlatAppearance.BorderSize = 0;
+            this.factorialb.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.factorialb.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.factorialb.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.factorialb.Font = new System.Drawing.Font("Rubik", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.factorialb.ForeColor = System.Drawing.Color.Transparent;
+            this.factorialb.Location = new System.Drawing.Point(123, 138);
+            this.factorialb.Name = "factorialb";
+            this.factorialb.OnHoverBorderColor = System.Drawing.Color.Transparent;
+            this.factorialb.OnHoverButtonColor = System.Drawing.Color.DimGray;
+            this.factorialb.OnHoverTextColor = System.Drawing.Color.White;
+            this.factorialb.Size = new System.Drawing.Size(54, 39);
+            this.factorialb.TabIndex = 38;
+            this.factorialb.Text = "x!";
+            this.factorialb.TextColor = System.Drawing.Color.White;
+            this.factorialb.UseVisualStyleBackColor = true;
             // 
-            // roundButton4
+            // cosb
             // 
-            this.roundButton4.BackColor = System.Drawing.SystemColors.WindowFrame;
-            this.roundButton4.BorderColor = System.Drawing.Color.Transparent;
-            this.roundButton4.ButtonColor = System.Drawing.SystemColors.WindowText;
-            this.roundButton4.FlatAppearance.BorderSize = 0;
-            this.roundButton4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.roundButton4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.roundButton4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.roundButton4.Font = new System.Drawing.Font("Rubik", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.roundButton4.ForeColor = System.Drawing.Color.Transparent;
-            this.roundButton4.Location = new System.Drawing.Point(123, 57);
-            this.roundButton4.Name = "roundButton4";
-            this.roundButton4.OnHoverBorderColor = System.Drawing.Color.Transparent;
-            this.roundButton4.OnHoverButtonColor = System.Drawing.Color.DimGray;
-            this.roundButton4.OnHoverTextColor = System.Drawing.Color.White;
-            this.roundButton4.Size = new System.Drawing.Size(54, 39);
-            this.roundButton4.TabIndex = 40;
-            this.roundButton4.Text = "cos";
-            this.roundButton4.TextColor = System.Drawing.Color.White;
-            this.roundButton4.UseVisualStyleBackColor = true;
+            this.cosb.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.cosb.BorderColor = System.Drawing.Color.Transparent;
+            this.cosb.ButtonColor = System.Drawing.SystemColors.WindowText;
+            this.cosb.FlatAppearance.BorderSize = 0;
+            this.cosb.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.cosb.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.cosb.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cosb.Font = new System.Drawing.Font("Rubik", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.cosb.ForeColor = System.Drawing.Color.Transparent;
+            this.cosb.Location = new System.Drawing.Point(123, 48);
+            this.cosb.Name = "cosb";
+            this.cosb.OnHoverBorderColor = System.Drawing.Color.Transparent;
+            this.cosb.OnHoverButtonColor = System.Drawing.Color.DimGray;
+            this.cosb.OnHoverTextColor = System.Drawing.Color.White;
+            this.cosb.Size = new System.Drawing.Size(54, 39);
+            this.cosb.TabIndex = 40;
+            this.cosb.Text = "cos";
+            this.cosb.TextColor = System.Drawing.Color.White;
+            this.cosb.UseVisualStyleBackColor = true;
             // 
             // bequals
             // 
@@ -450,7 +357,7 @@
             this.bequals.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bequals.Font = new System.Drawing.Font("Rubik", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.bequals.ForeColor = System.Drawing.Color.Transparent;
-            this.bequals.Location = new System.Drawing.Point(363, 219);
+            this.bequals.Location = new System.Drawing.Point(363, 183);
             this.bequals.Name = "bequals";
             this.bequals.OnHoverBorderColor = System.Drawing.SystemColors.WindowFrame;
             this.bequals.OnHoverButtonColor = System.Drawing.Color.MistyRose;
@@ -482,6 +389,7 @@
             this.bdiv.Text = "/";
             this.bdiv.TextColor = System.Drawing.Color.White;
             this.bdiv.UseVisualStyleBackColor = true;
+            this.bdiv.Click += new System.EventHandler(this.OperationSelectedAction);
             // 
             // bminus
             // 
@@ -494,7 +402,7 @@
             this.bminus.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bminus.Font = new System.Drawing.Font("Rubik", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.bminus.ForeColor = System.Drawing.Color.Transparent;
-            this.bminus.Location = new System.Drawing.Point(363, 111);
+            this.bminus.Location = new System.Drawing.Point(363, 93);
             this.bminus.Name = "bminus";
             this.bminus.OnHoverBorderColor = System.Drawing.SystemColors.WindowFrame;
             this.bminus.OnHoverButtonColor = System.Drawing.Color.MistyRose;
@@ -504,6 +412,7 @@
             this.bminus.Text = "-";
             this.bminus.TextColor = System.Drawing.Color.White;
             this.bminus.UseVisualStyleBackColor = true;
+            this.bminus.Click += new System.EventHandler(this.OperationSelectedAction);
             // 
             // bincrement
             // 
@@ -516,7 +425,7 @@
             this.bincrement.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bincrement.Font = new System.Drawing.Font("Rubik", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.bincrement.ForeColor = System.Drawing.Color.Transparent;
-            this.bincrement.Location = new System.Drawing.Point(363, 165);
+            this.bincrement.Location = new System.Drawing.Point(363, 138);
             this.bincrement.Name = "bincrement";
             this.bincrement.OnHoverBorderColor = System.Drawing.SystemColors.WindowFrame;
             this.bincrement.OnHoverButtonColor = System.Drawing.Color.MistyRose;
@@ -526,6 +435,7 @@
             this.bincrement.Text = "+";
             this.bincrement.TextColor = System.Drawing.Color.White;
             this.bincrement.UseVisualStyleBackColor = true;
+            this.bincrement.Click += new System.EventHandler(this.OperationSelectedAction);
             // 
             // bmulti
             // 
@@ -538,7 +448,7 @@
             this.bmulti.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bmulti.Font = new System.Drawing.Font("Rubik", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.bmulti.ForeColor = System.Drawing.Color.Transparent;
-            this.bmulti.Location = new System.Drawing.Point(363, 57);
+            this.bmulti.Location = new System.Drawing.Point(363, 48);
             this.bmulti.Name = "bmulti";
             this.bmulti.OnHoverBorderColor = System.Drawing.Color.Transparent;
             this.bmulti.OnHoverButtonColor = System.Drawing.Color.MistyRose;
@@ -548,6 +458,7 @@
             this.bmulti.Text = "x";
             this.bmulti.TextColor = System.Drawing.Color.White;
             this.bmulti.UseVisualStyleBackColor = true;
+            this.bmulti.Click += new System.EventHandler(this.OperationSelectedAction);
             // 
             // bdot
             // 
@@ -560,7 +471,7 @@
             this.bdot.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bdot.Font = new System.Drawing.Font("Rubik", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.bdot.ForeColor = System.Drawing.Color.Transparent;
-            this.bdot.Location = new System.Drawing.Point(303, 219);
+            this.bdot.Location = new System.Drawing.Point(303, 183);
             this.bdot.Name = "bdot";
             this.bdot.OnHoverBorderColor = System.Drawing.Color.Transparent;
             this.bdot.OnHoverButtonColor = System.Drawing.Color.DimGray;
@@ -648,7 +559,7 @@
             this.b0.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.b0.Font = new System.Drawing.Font("Rubik", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.b0.ForeColor = System.Drawing.Color.Transparent;
-            this.b0.Location = new System.Drawing.Point(183, 219);
+            this.b0.Location = new System.Drawing.Point(183, 183);
             this.b0.Name = "b0";
             this.b0.OnHoverBorderColor = System.Drawing.Color.Transparent;
             this.b0.OnHoverButtonColor = System.Drawing.Color.DimGray;
@@ -660,6 +571,7 @@
             this.b0.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.b0.TextColor = System.Drawing.Color.WhiteSmoke;
             this.b0.UseVisualStyleBackColor = true;
+            this.b0.Click += new System.EventHandler(this.ButtonToMainTextBox);
             // 
             // b5
             // 
@@ -672,7 +584,7 @@
             this.b5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.b5.Font = new System.Drawing.Font("Rubik", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.b5.ForeColor = System.Drawing.Color.Transparent;
-            this.b5.Location = new System.Drawing.Point(243, 111);
+            this.b5.Location = new System.Drawing.Point(243, 93);
             this.b5.Name = "b5";
             this.b5.OnHoverBorderColor = System.Drawing.Color.Transparent;
             this.b5.OnHoverButtonColor = System.Drawing.Color.DimGray;
@@ -682,6 +594,7 @@
             this.b5.Text = "5";
             this.b5.TextColor = System.Drawing.Color.WhiteSmoke;
             this.b5.UseVisualStyleBackColor = true;
+            this.b5.Click += new System.EventHandler(this.ButtonToMainTextBox);
             // 
             // b6
             // 
@@ -694,7 +607,7 @@
             this.b6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.b6.Font = new System.Drawing.Font("Rubik", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.b6.ForeColor = System.Drawing.Color.Transparent;
-            this.b6.Location = new System.Drawing.Point(303, 111);
+            this.b6.Location = new System.Drawing.Point(303, 93);
             this.b6.Name = "b6";
             this.b6.OnHoverBorderColor = System.Drawing.Color.Transparent;
             this.b6.OnHoverButtonColor = System.Drawing.Color.DimGray;
@@ -704,6 +617,7 @@
             this.b6.Text = "6";
             this.b6.TextColor = System.Drawing.Color.WhiteSmoke;
             this.b6.UseVisualStyleBackColor = true;
+            this.b6.Click += new System.EventHandler(this.ButtonToMainTextBox);
             // 
             // b4
             // 
@@ -716,7 +630,7 @@
             this.b4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.b4.Font = new System.Drawing.Font("Rubik", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.b4.ForeColor = System.Drawing.Color.Transparent;
-            this.b4.Location = new System.Drawing.Point(183, 111);
+            this.b4.Location = new System.Drawing.Point(183, 93);
             this.b4.Name = "b4";
             this.b4.OnHoverBorderColor = System.Drawing.Color.Transparent;
             this.b4.OnHoverButtonColor = System.Drawing.Color.DimGray;
@@ -726,6 +640,7 @@
             this.b4.Text = "4";
             this.b4.TextColor = System.Drawing.Color.WhiteSmoke;
             this.b4.UseVisualStyleBackColor = true;
+            this.b4.Click += new System.EventHandler(this.ButtonToMainTextBox);
             // 
             // b1
             // 
@@ -738,7 +653,7 @@
             this.b1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.b1.Font = new System.Drawing.Font("Rubik", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.b1.ForeColor = System.Drawing.Color.Transparent;
-            this.b1.Location = new System.Drawing.Point(183, 165);
+            this.b1.Location = new System.Drawing.Point(183, 138);
             this.b1.Name = "b1";
             this.b1.OnHoverBorderColor = System.Drawing.Color.Transparent;
             this.b1.OnHoverButtonColor = System.Drawing.Color.DimGray;
@@ -748,6 +663,7 @@
             this.b1.Text = "1";
             this.b1.TextColor = System.Drawing.Color.WhiteSmoke;
             this.b1.UseVisualStyleBackColor = true;
+            this.b1.Click += new System.EventHandler(this.ButtonToMainTextBox);
             // 
             // b2
             // 
@@ -760,7 +676,7 @@
             this.b2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.b2.Font = new System.Drawing.Font("Rubik", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.b2.ForeColor = System.Drawing.Color.Transparent;
-            this.b2.Location = new System.Drawing.Point(243, 165);
+            this.b2.Location = new System.Drawing.Point(243, 138);
             this.b2.Name = "b2";
             this.b2.OnHoverBorderColor = System.Drawing.Color.Transparent;
             this.b2.OnHoverButtonColor = System.Drawing.Color.DimGray;
@@ -770,6 +686,7 @@
             this.b2.Text = "2";
             this.b2.TextColor = System.Drawing.Color.WhiteSmoke;
             this.b2.UseVisualStyleBackColor = true;
+            this.b2.Click += new System.EventHandler(this.ButtonToMainTextBox);
             // 
             // b3
             // 
@@ -782,7 +699,7 @@
             this.b3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.b3.Font = new System.Drawing.Font("Rubik", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.b3.ForeColor = System.Drawing.Color.Transparent;
-            this.b3.Location = new System.Drawing.Point(303, 165);
+            this.b3.Location = new System.Drawing.Point(303, 138);
             this.b3.Name = "b3";
             this.b3.OnHoverBorderColor = System.Drawing.Color.Transparent;
             this.b3.OnHoverButtonColor = System.Drawing.Color.DimGray;
@@ -792,6 +709,7 @@
             this.b3.Text = "3";
             this.b3.TextColor = System.Drawing.Color.WhiteSmoke;
             this.b3.UseVisualStyleBackColor = true;
+            this.b3.Click += new System.EventHandler(this.ButtonToMainTextBox);
             // 
             // b8
             // 
@@ -804,7 +722,7 @@
             this.b8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.b8.Font = new System.Drawing.Font("Rubik", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.b8.ForeColor = System.Drawing.Color.Transparent;
-            this.b8.Location = new System.Drawing.Point(243, 57);
+            this.b8.Location = new System.Drawing.Point(243, 48);
             this.b8.Name = "b8";
             this.b8.OnHoverBorderColor = System.Drawing.Color.Transparent;
             this.b8.OnHoverButtonColor = System.Drawing.Color.DimGray;
@@ -814,6 +732,7 @@
             this.b8.Text = "8";
             this.b8.TextColor = System.Drawing.Color.WhiteSmoke;
             this.b8.UseVisualStyleBackColor = true;
+            this.b8.Click += new System.EventHandler(this.ButtonToMainTextBox);
             // 
             // b9
             // 
@@ -826,7 +745,7 @@
             this.b9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.b9.Font = new System.Drawing.Font("Rubik", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.b9.ForeColor = System.Drawing.Color.Transparent;
-            this.b9.Location = new System.Drawing.Point(303, 57);
+            this.b9.Location = new System.Drawing.Point(303, 48);
             this.b9.Name = "b9";
             this.b9.OnHoverBorderColor = System.Drawing.Color.Transparent;
             this.b9.OnHoverButtonColor = System.Drawing.Color.DimGray;
@@ -836,6 +755,7 @@
             this.b9.Text = "9";
             this.b9.TextColor = System.Drawing.Color.WhiteSmoke;
             this.b9.UseVisualStyleBackColor = true;
+            this.b9.Click += new System.EventHandler(this.ButtonToMainTextBox);
             // 
             // b7
             // 
@@ -848,7 +768,7 @@
             this.b7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.b7.Font = new System.Drawing.Font("Rubik", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.b7.ForeColor = System.Drawing.Color.Transparent;
-            this.b7.Location = new System.Drawing.Point(183, 57);
+            this.b7.Location = new System.Drawing.Point(183, 48);
             this.b7.Name = "b7";
             this.b7.OnHoverBorderColor = System.Drawing.Color.Transparent;
             this.b7.OnHoverButtonColor = System.Drawing.Color.DimGray;
@@ -858,26 +778,54 @@
             this.b7.Text = "7";
             this.b7.TextColor = System.Drawing.Color.WhiteSmoke;
             this.b7.UseVisualStyleBackColor = true;
+            this.b7.Click += new System.EventHandler(this.ButtonToMainTextBox);
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.ActionBuff);
+            this.panel2.Controls.Add(this.maintextbox);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(428, 83);
             this.panel2.TabIndex = 20;
             // 
+            // ActionBuff
+            // 
+            this.ActionBuff.Location = new System.Drawing.Point(13, 11);
+            this.ActionBuff.Name = "ActionBuff";
+            this.ActionBuff.ReadOnly = true;
+            this.ActionBuff.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.ActionBuff.Size = new System.Drawing.Size(403, 20);
+            this.ActionBuff.TabIndex = 1;
+            this.ActionBuff.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // maintextbox
+            // 
+            this.maintextbox.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.maintextbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.maintextbox.Font = new System.Drawing.Font("Rubik", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.maintextbox.Location = new System.Drawing.Point(13, 37);
+            this.maintextbox.MaxLength = 16;
+            this.maintextbox.Name = "maintextbox";
+            this.maintextbox.ReadOnly = true;
+            this.maintextbox.Size = new System.Drawing.Size(404, 35);
+            this.maintextbox.TabIndex = 0;
+            this.maintextbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.WindowFrame;
-            this.ClientSize = new System.Drawing.Size(428, 358);
+            this.ClientSize = new System.Drawing.Size(428, 308);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "Form1";
             this.Text = "S";
             this.panel1.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -905,21 +853,19 @@
         private Elements.RoundButton b9;
         private Elements.RoundButton b7;
         private System.Windows.Forms.Panel panel2;
-        private Elements.RoundButton roundButton6;
+        private Elements.RoundButton lnb;
         private Elements.RoundButton roundButton7;
-        private Elements.RoundButton roundButton8;
-        private Elements.RoundButton roundButton9;
-        private Elements.RoundButton roundButton10;
-        private Elements.RoundButton roundButton5;
-        private Elements.RoundButton roundButton1;
-        private Elements.RoundButton roundButton2;
-        private Elements.RoundButton roundButton3;
-        private Elements.RoundButton roundButton4;
-        private Elements.RoundButton roundButton11;
-        private Elements.RoundButton roundButton12;
-        private Elements.RoundButton roundButton13;
-        private Elements.RoundButton roundButton14;
-        private Elements.RoundButton roundButton15;
+        private Elements.RoundButton sqrtb;
+        private Elements.RoundButton logb;
+        private Elements.RoundButton expxb;
+        private Elements.RoundButton squareb;
+        private Elements.RoundButton sinb;
+        private Elements.RoundButton tanb;
+        private Elements.RoundButton factorialb;
+        private Elements.RoundButton cosb;
+        private Elements.RoundButton summab;
+        private System.Windows.Forms.TextBox maintextbox;
+        private System.Windows.Forms.TextBox ActionBuff;
     }
 }
 
