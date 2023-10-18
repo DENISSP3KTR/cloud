@@ -29,6 +29,9 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.ActionBuff = new System.Windows.Forms.TextBox();
+            this.maintextbox = new System.Windows.Forms.TextBox();
             this.summab = new Kalkulator.Elements.RoundButton();
             this.lnb = new Kalkulator.Elements.RoundButton();
             this.roundButton7 = new Kalkulator.Elements.RoundButton();
@@ -59,9 +62,6 @@
             this.b8 = new Kalkulator.Elements.RoundButton();
             this.b9 = new Kalkulator.Elements.RoundButton();
             this.b7 = new Kalkulator.Elements.RoundButton();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.ActionBuff = new System.Windows.Forms.TextBox();
-            this.maintextbox = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -103,6 +103,42 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(428, 225);
             this.panel1.TabIndex = 19;
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.ActionBuff);
+            this.panel2.Controls.Add(this.maintextbox);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(428, 83);
+            this.panel2.TabIndex = 20;
+            // 
+            // ActionBuff
+            // 
+            this.ActionBuff.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.ActionBuff.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.ActionBuff.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.ActionBuff.Location = new System.Drawing.Point(13, 11);
+            this.ActionBuff.Name = "ActionBuff";
+            this.ActionBuff.ReadOnly = true;
+            this.ActionBuff.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.ActionBuff.Size = new System.Drawing.Size(403, 15);
+            this.ActionBuff.TabIndex = 1;
+            this.ActionBuff.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // maintextbox
+            // 
+            this.maintextbox.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.maintextbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.maintextbox.Font = new System.Drawing.Font("Rubik", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.maintextbox.Location = new System.Drawing.Point(13, 37);
+            this.maintextbox.MaxLength = 16;
+            this.maintextbox.Name = "maintextbox";
+            this.maintextbox.ReadOnly = true;
+            this.maintextbox.Size = new System.Drawing.Size(404, 35);
+            this.maintextbox.TabIndex = 0;
+            this.maintextbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // summab
             // 
@@ -779,39 +815,6 @@
             this.b7.TextColor = System.Drawing.Color.WhiteSmoke;
             this.b7.UseVisualStyleBackColor = true;
             this.b7.Click += new System.EventHandler(this.ButtonToMainTextBox);
-            // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.ActionBuff);
-            this.panel2.Controls.Add(this.maintextbox);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(428, 83);
-            this.panel2.TabIndex = 20;
-            // 
-            // ActionBuff
-            // 
-            this.ActionBuff.Location = new System.Drawing.Point(13, 11);
-            this.ActionBuff.Name = "ActionBuff";
-            this.ActionBuff.ReadOnly = true;
-            this.ActionBuff.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.ActionBuff.Size = new System.Drawing.Size(403, 20);
-            this.ActionBuff.TabIndex = 1;
-            this.ActionBuff.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // maintextbox
-            // 
-            this.maintextbox.BackColor = System.Drawing.SystemColors.WindowFrame;
-            this.maintextbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.maintextbox.Font = new System.Drawing.Font("Rubik", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.maintextbox.Location = new System.Drawing.Point(13, 37);
-            this.maintextbox.MaxLength = 16;
-            this.maintextbox.Name = "maintextbox";
-            this.maintextbox.ReadOnly = true;
-            this.maintextbox.Size = new System.Drawing.Size(404, 35);
-            this.maintextbox.TabIndex = 0;
-            this.maintextbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // Form1
             // 

@@ -16,10 +16,6 @@ namespace Kalkulator
         {
             InitializeComponent();
         }
-        //if ((maintextbox.Text.Length % 3 == 0) & (maintextbox.Text.Length != 0) & (maintextbox.Text.Length<16))
-        //{
-        //    maintextbox.Text += ',';
-        //}
         float num1 = 0;
         float num2 = 0;
         float result = 0;
@@ -46,7 +42,7 @@ namespace Kalkulator
             operation = button.Text[0];
             ActionBuff.Text = maintextbox.Text + operation.ToString();
             isOperatorSelected = true;
-            maintextbox.Text = "";
+            maintextbox.Text = result.ToString();
         }
         private void EveryAction()
         {
