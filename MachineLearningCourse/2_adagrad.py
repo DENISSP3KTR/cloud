@@ -105,8 +105,8 @@ ax = fig.add_subplot(111, projection='3d')
 
 ax.plot_surface(X1, X2, Z, color='b', alpha=0.3)
 ax.plot(x, y, z, label='Gradient Descent', marker='o', color='r')
-ax.plot(x2, y2, z2, label='Gradient Descent', marker='o', color='g')
-ax.plot(x3, y3, z3, label='Gradient Descent', marker='o', color='b')
+ax.plot(x2, y2, z2, label='Gradient Descent', marker='v', color='g')
+ax.plot(x3, y3, z3, label='Gradient Descent', marker='.', color='b')
 
 ax.set_xlabel('X1')
 ax.set_ylabel('X2')
