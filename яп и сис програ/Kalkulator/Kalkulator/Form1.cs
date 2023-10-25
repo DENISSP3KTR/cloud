@@ -16,15 +16,15 @@ namespace Kalkulator
         {
             InitializeComponent();
         }
-        float num1 = 0;
-        float num2 = 0;
-        float result = 0;
+        float num1;
+        float num2;
+        float result;
         bool isOperatorSelected = false;
         char operation;
         private void ButtonToMainTextBox(object sender, EventArgs e)
         {
             Button button = (Button)sender;
-            if (maintextbox.Text == "" || maintextbox.Text == result.ToString())
+            if (maintextbox.Text == "" || maintextbox.Text == num1.ToString())
             {
                 maintextbox.Text = button.Text;
             }
@@ -42,7 +42,7 @@ namespace Kalkulator
             operation = button.Text[0];
             ActionBuff.Text = maintextbox.Text + operation.ToString();
             isOperatorSelected = true;
-            maintextbox.Text = result.ToString();
+            //maintextbox.Text = "";
         }
         private void EveryAction()
         {
@@ -61,7 +61,15 @@ namespace Kalkulator
                         result = num1 * num2;
                         break;
                     case '/':
-                        result = num1 / num2;
+                        if (num2 != 0)
+                        {
+                            result = num1 / num2;
+                        }
+                        else
+                        {
+                            maintextbox.Text = "Ошибка";
+                            return;
+                        }
                         break;
                     case '=':
                         maintextbox.Text = result.ToString();
@@ -70,6 +78,16 @@ namespace Kalkulator
                 maintextbox.Text = result.ToString();
                 isOperatorSelected = false;
             }
+        }
+
+        private void bAC_Click(object sender, EventArgs e)
+        {
+            result = 0;
+            num1 = 0;
+            num2 = 0;
+            maintextbox.Clear();
+            ActionBuff.Clear();
+            isOperatorSelected = false;
         }
     }
 }
