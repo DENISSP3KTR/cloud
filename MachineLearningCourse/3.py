@@ -6,11 +6,12 @@ def f(x):
 
 
 def fs(x):
-    return 0.5 * (1 + x) * (1 - x)
+    return 0.5 * (1 + f(x)) * (1 - f(x))
 
 
 def forward(w, arr):
     return np.dot(w, arr)
+
 
 def Out_Array(w, arr):
     return np.array([f(x) for x in forward(w, arr)])
@@ -20,7 +21,7 @@ w1 = np.array([[-0.2, 0.3, -0.4], [0.1, -0.3, -0.4]])
 w2 = np.array([[0.2, 0.3], [-0.1, 0.2], [-0.4, 0.3]])
 w3 = np.array([0.3, -0.1, -0.4])
 h = 0.01
-n = 200000
+n = 10000
 
 
 def slay(w, delta, out):
@@ -42,8 +43,10 @@ def backprop(a):
         delta2 = delta * w3 * fs(o2)
         for i in range(3):
             w2[i, :] = slay(w2[i, :], delta2[i], o1[0])
+
         g1 = delta2[0] * w2[0, 0] + delta2[1] * w2[1, 0] + delta2[2] * w2[2, 0]
         g2 = delta2[0] * w2[0, 1] + delta2[1] * w2[1, 1] + delta2[2] * w2[2, 1]
+
         delta3 = (g1 * fs(o1[0]), g2 * fs(o1[1]))
         for i in range(2):
             w1[i, :] = slay(w1[i, :], delta3[i], np.array(x[0:3]))
@@ -56,7 +59,7 @@ a = [(-1, -1, -1, -1),
      (1, -1, -1, -1),
      (1, -1, 1, 1),
      (1, 1, -1, -1),
-     (1, 1, 1, -1)]
+     (1, 1, 1, 1)]
 
 backprop(a)
 

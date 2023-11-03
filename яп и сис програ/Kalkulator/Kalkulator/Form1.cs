@@ -19,65 +19,59 @@ namespace Kalkulator
         float num1;
         float num2;
         float result;
-        bool isOperatorSelected = false;
+        bool isInput = true;
         char operation;
+        string oper;
         private void ButtonToMainTextBox(object sender, EventArgs e)
         {
+            if (isInput)
+            {
+                maintextbox.Text = "";
+                isInput = false;
+            }
             Button button = (Button)sender;
-            if (maintextbox.Text == "" || maintextbox.Text == num1.ToString())
-            {
-                maintextbox.Text = button.Text;
-            }
-            else if (maintextbox.Text.Length <= 16)
-            {
-                maintextbox.Text += button.Text;
-            }
+            maintextbox.Text += button.Text;
         }
         private void OperationSelectedAction(object sender, EventArgs e)
         {
-            if (isOperatorSelected)
-                EveryAction();
-            Button button = (Button)sender;
             num1 = float.Parse(maintextbox.Text);
+            result = num1;
+            if (!isInput)
+            {
+                EveryAction();
+                isInput = true;
+            }
+            Button button = (Button)sender;
             operation = button.Text[0];
             ActionBuff.Text = maintextbox.Text + operation.ToString();
-            isOperatorSelected = true;
-            //maintextbox.Text = "";
         }
         private void EveryAction()
         {
-            if (isOperatorSelected)
+            num2 = float.Parse(maintextbox.Text);
+            switch (operation)
             {
-                num2 = float.Parse(maintextbox.Text);
-                switch (operation)
-                {
-                    case '+':
-                        result = num1 + num2;
-                        break;
-                    case '-':
-                        result = num1 - num2;
-                        break;
-                    case 'x':
-                        result = num1 * num2;
-                        break;
-                    case '/':
-                        if (num2 != 0)
-                        {
-                            result = num1 / num2;
-                        }
-                        else
-                        {
-                            maintextbox.Text = "Ошибка";
-                            return;
-                        }
-                        break;
-                    case '=':
-                        maintextbox.Text = result.ToString();
-                        break;
-                }
-                maintextbox.Text = result.ToString();
-                isOperatorSelected = false;
+                case '+':
+                    result = num1 + num2;
+                    break;
+                case '-':
+                    result = num1 - num2;
+                    break;
+                case 'x':
+                    result = num1 * num2;
+                    break;
+                case '/':
+                    if (num2 != 0)
+                    {
+                        result = num1 / num2;
+                    }
+                    else
+                    {
+                        maintextbox.Text = "Ошибка";
+                        return;
+                    }
+                    break;
             }
+            maintextbox.Text = result.ToString();
         }
 
         private void bAC_Click(object sender, EventArgs e)
@@ -87,7 +81,68 @@ namespace Kalkulator
             num2 = 0;
             maintextbox.Clear();
             ActionBuff.Clear();
-            isOperatorSelected = false;
+            isInput = true;
+        }
+
+        private void bequals_Click(object sender, EventArgs e)
+        {
+            EveryAction();
+            isInput = true;
+            ActionBuff.Clear();
+        }
+        public static long Fact(long n)
+        {
+            if (n == 0)
+                return 1;
+            else
+                return n * Fact(n - 1);
+        }
+
+        private void factorialBtn_Click(object sender, EventArgs e)
+        {
+            if (!isInput)
+            {
+                maintextbox.Text = Fact(long.Parse(maintextbox.Text)).ToString();
+            }
+        }
+        private void OtherAction(object sender, EventArgs e)
+        {
+            Button button = (Button)sender;
+            oper = button.Text;
+            if (!isInput)
+            {
+                num1 = float.Parse(maintextbox.Text);
+                switch (oper)
+                {
+                    case "sin":
+                        maintextbox.Text = Math.Sin(num1).ToString();
+                        break;
+                    case "cos":
+                        maintextbox.Text = Math.Cos(num1).ToString();
+                        break;
+                    case "tan":
+                        maintextbox.Text = Math.Tan(num1).ToString();
+                        break;
+                    case "e":
+                        maintextbox.Text = Math.E.ToString();
+                        break;
+                    case "exp(x)":
+                        maintextbox.Text = Math.Exp(num1).ToString();
+                        break;
+                    case "log":
+                        maintextbox.Text = Math.Log10(num1).ToString();
+                        break;
+                    case "ln":
+                        maintextbox.Text = Math.Log(num1).ToString();
+                        break;
+                    case "√x":
+                        maintextbox.Text = Math.Sqrt(num1).ToString();
+                        break;
+                    case "x²":
+                        maintextbox.Text = Math.Pow(num1, 2).ToString();
+                        break;
+                }
+            }
         }
     }
 }
